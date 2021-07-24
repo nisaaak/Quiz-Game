@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device=width, initial-scale=1.0">
+	<title>main page</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tourney:wght@300&display=swap">
+	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style-main.css">
+</head>
+<body>
+	<div class="main">
+		<div class="skor">
+			<h3>Skor</h3>
+			<h3 id="skorAnda">0</h3>
+		</div>
+		<div class="pertanyaan" id="toremove">
+			<img src="norwegia.png" id="myImg">
+			<form>
+				<p>Coba tebak negara apakah ini??</p>
+				<input type="text" name="jawab" id="jawab">
+			</form>
+		</div>
+		<div id="selesai">
+		
+		</div>
+		<button id="lanjut">Lanjut</button>
+	</div>
+	<script>
+		var maps = ['norwegia', 'amerika', 'australia', 'chile', 'indonesia', 'kanada', 'korea selatan', 'mesir', 'prancis', 'rusia'];
+		let imgNow = 0;
+		let skor = 0;
+
+		//click button
+		document.getElementById("lanjut").addEventListener("click", function(){
+			if (document.getElementById("jawab").value.toLowerCase() === maps[imgNow]){
+				skor+=1;
+			}
+			if (imgNow === 9){
+				document.getElementById("skorAnda").innerHTML = skor.toString();
+				document.getElementById("toremove").remove();
+				document.getElementById("lanjut").remove();
+				document.getElementById("selesai").innerHTML = "Game Selesai";
+				document.getElementsByClassName("skor")[0].style.justifyContent= "center";
+				document.getElementsByClassName("skor")[0].style.marginTop= "100px";
+			}else{
+				imgNow+=1;
+				document.getElementById("myImg").src = maps[(imgNow)]+".png";
+				document.getElementById("skorAnda").innerHTML = skor.toString();
+				document.getElementById("jawab").value = '';
+				console.log(imgNow);
+				console.log(skor);
+			}
+		})
+	</script>
+</body>
+</html>

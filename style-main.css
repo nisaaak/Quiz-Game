@@ -1,0 +1,65 @@
+*{
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body{
+	font-family: 'Tourney', cursive;
+	text-align: center;
+	font-size: 1.5em;
+	color: #32e0c4;
+
+}
+
+.main{
+	position:  fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: #393e46;
+}
+
+.skor{
+	top: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.skor h3{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.pertanyaan img{
+	height: 40vh;
+}
+
+.pertanyaan input{
+	width: 35vw;
+	height: 7vh;
+	border-bottom: 20px;
+	font-size: 1.2em;
+}
+
+button{
+	margin-top: 30px;
+	background: #EEEEEE;
+	color: #222831;
+	border-radius: 20px;
+	box-shadow: 0 6px 0 hsl(0, 0%, 50%);
+	border: none;
+	font-family: 'Goldman', cursive;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+button:active{
+	transform: translateY(6px);
+	box-shadow: none;
+}
+
+#selesai{
+	font-size: 2em;
+}

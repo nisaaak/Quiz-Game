@@ -1,0 +1,47 @@
+*{
+	box-sizing: border-box;
+
+}
+
+body{
+	font-family: 'Tourney', cursive;
+	text-align: center;
+	font-size: 1.5em;
+	color: #32e0c4;
+}
+
+.halamanAwal{
+	position:  fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	background: #393e46;
+}
+
+.halamanAwal .center{
+	margin: 0 auto;
+	padding: 165px 15px 15px;
+}
+
+.halamanAwal h1{
+	font-size: 3em;
+}
+
+.halamanAwal button{
+	padding: 15px 30px;
+	background: #EEEEEE;
+	color: #222831;
+	border-radius: 20px;
+	box-shadow: 0 6px 0 hsl(0, 0%, 50%);
+	border: none;
+	font-family: 'Goldman', cursive;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+.halamanAwal button:active{
+	transform: translateY(6px);
+	box-shadow: none;
+}
